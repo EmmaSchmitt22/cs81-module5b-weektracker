@@ -14,17 +14,22 @@ const myWeek = [
 //There are no clear patterns between day and night, other than that I tend to read at night.
 
 //Function using filter() to find all instances of reading
-const readingInstances = myWeek.filter(item => item.activity === "reading");
+const readingLogs = myWeek.filter(item => item.activity === "reading");
 
 //Function using map() to extract only activity and time data
 const activityHours = myWeek.map(function(day){
     return {activity: day.activity, Hours: day.hoursSpent};
 });
 
-//Total hours spent on physical activity
-//All activities
+//Function that can be modified to filter for any activity's day of the week
+function activityDay(testFn){
+   return myWeek.filter(testFn);
+}
+const movieDay = activityDay(activity => activity.activity === "movies").map(item => item.Day);
 
 
 //Test Calls
-console.log(readingInstances);
-console.log(activityHours);
+console.log("\n");
+console.log("Reading logs were: ",readingLogs, "\n");
+console.log("Hours spent on activites were: ",activityHours, "\n");
+console.log("Movie days were: ", movieDay);
