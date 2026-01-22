@@ -13,6 +13,13 @@ const myWeek = [
 //The physical category will dominate my week, because the data shows that it has the highest frequency.
 //There are no clear patterns between day and night, other than that I tend to read at night.
 
-//Function ideas:
+//Function using filter() to find all instances of reading
+const readingInstances = myWeek.filter(item => item.activity === "reading");
+
+
 //Total hours spent on physical activity
 //All activities
+
+
+//Test Calls
+console.log(readingInstances);
