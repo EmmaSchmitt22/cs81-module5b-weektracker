@@ -16,6 +16,10 @@ const myWeek = [
 //Function using filter() to find all instances of reading
 const readingInstances = myWeek.filter(item => item.activity === "reading");
 
+//Function using map() to extract only activity and time data
+const activityHours = myWeek.map(function(day){
+    return {activity: day.activity, Hours: day.hoursSpent};
+});
 
 //Total hours spent on physical activity
 //All activities
@@ -23,3 +27,4 @@ const readingInstances = myWeek.filter(item => item.activity === "reading");
 
 //Test Calls
 console.log(readingInstances);
+console.log(activityHours);
