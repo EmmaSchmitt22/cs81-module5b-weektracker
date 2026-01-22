@@ -1,4 +1,5 @@
 //Emma Schmitt
+//Repo URL: https://github.com/EmmaSchmitt22/cs81-module5b-weektracker
 
 const myWeek = [
     {Day: "monday", activity: "skating", category: "physical",hoursSpent: 1, enjoyment: 9, timeOfDay: "afternoon"},
